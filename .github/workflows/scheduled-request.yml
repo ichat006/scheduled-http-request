@@ -1,0 +1,14 @@
+name: 每10分钟发送HTTP请求
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+
+jobs:
+  send_request:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 发送HTTP请求
+        run: |
+          curl -X GET "https://n8n-otsx.onrender.com/webhook/n8n?arg=%E4%BD%A0%E6%98%AF%E8%B0%81"
