@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   # 定时触发工作流，每10分钟一次
   schedule:
-    - cron: "10/10 * * * *"
+    - cron: "*/10 * * * *"
 
 jobs:
   send_request:
