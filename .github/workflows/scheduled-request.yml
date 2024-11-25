@@ -1,6 +1,9 @@
 name: 每10分钟发送HTTP请求
 
 on:
+  # 手动触发工作流
+  workflow_dispatch:
+  # 定时触发工作流，每10分钟一次
   schedule:
     - cron: "*/10 * * * *"
 
